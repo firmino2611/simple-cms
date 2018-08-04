@@ -178,8 +178,8 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         Kodeine\Acl\AclServiceProvider::class,
-        Nwidart\Modules\LaravelModulesServiceProvider::class,
-        Modules\Blog\Providers\BlogServiceProvider::class
+        // Nwidart\Modules\LaravelModulesServiceProvider::class,
+        // Modules\Blog\Providers\BlogServiceProvider::class
 
     ],
 
@@ -231,7 +231,9 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'acl' => Kodeine\Acl\Middleware\HasPermission::class,
-        'Module' => Nwidart\Modules\Facades\Module::class
+        'Module' => Nwidart\Modules\Facades\Module::class,
+
+        'Configuracao' => App\Support\Facades\Configuracao::class,
 
     ],
 

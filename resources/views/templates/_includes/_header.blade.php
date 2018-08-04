@@ -1,9 +1,9 @@
-<div id="top" class="clearfix"> 
+<div id="top" class="clearfix" style="background-image: linear-gradient(to bottom,#5cb85c,#26a65b)"> 
     <!-- Start App Logo -->
-    <div class="applogo"> <a href="#" data-toggle="modal" data-target="#info" class="logo">Mobiplus</a> </div>
+    <div class="applogo"> <a style="color: white; font-weight: normal; text-shadow: none" href="#" data-toggle="modal" data-target="#info" class="logo">Painel</a> </div>
     <!-- End App Logo --> 
     <!-- Start Sidebar Show Hide Button --> 
-    <a href="#" class="sidebar-open-button"><i class="fa fa-bars"></i></a> <a href="#" class="sidebar-open-button-mobile"><i class="fa fa-bars"></i></a> 
+    <a href="#" class="sidebar-open-button"><i style="color: white" class="fa fa-bars"></i></a> <a  href="#" class="sidebar-open-button-mobile"><i class="fa fa-bars"></i></a> 
     <!-- End Sidebar Show Hide Button --> 
     <!-- Start Searchbox -->
     {{-- <form class="searchform">
@@ -62,7 +62,7 @@
             </ul>
         </li>
        
-        <li class="dropdown link"> <a href="#" data-toggle="dropdown" class="dropdown-toggle profilebox"><img src="{{ asset('public/sistema/img/profileimg.png') }}" alt="img"><b></b> {{ Auth::user()->nome }}<span class="caret"></span></a>
+        <li class="dropdown link"> <a style="color: white" href="#" data-toggle="dropdown" class="dropdown-toggle profilebox"><img src="{{ asset('public/sistema/img/profileimg.png') }}" alt="img"><b></b> {{ Auth::user()->nome }}<span class="caret"></span></a>
             <ul class="dropdown-menu dropdown-menu-list dropdown-menu-right">
                 <li role="presentation" class="dropdown-header">OPÇÕES</li>
                 {{-- <li><a href="#"><i class="fa falist fa-inbox"></i>Inbox<span class="badge label-danger">2</span></a></li> --}}

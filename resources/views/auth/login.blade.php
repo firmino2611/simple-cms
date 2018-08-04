@@ -27,7 +27,7 @@
                 <form class="form-horizontal" style="box-shadow: 5px 5px 20px 2px rgba(0,0,0,.5); padding: 20px" action="{{ route('login.autenticar') }}" method="POST">
                     {{ csrf_field() }}
                     <img src="" alt="" id="logo">
-                    <h3 align="center">Login</h3>
+                    <h3 align="center">Painel de administrativo</h3>
 
                     @if(Session::has('erro'))
                         @component('components.alerta', ['icone'=>'window-close', 'alerta'=>6])

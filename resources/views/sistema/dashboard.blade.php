@@ -5,11 +5,11 @@
 @section('content')
 
     <!-- Page header -->
-    @component('components.page-header', ['itens' => [
+    {{-- @component('components.page-header', ['itens' => [
         ['nome' => 'Dashboard', 'ativo' => true]
     ]])
         @slot('titulo') Dashboard @endslot
-    @endcomponent
+    @endcomponent --}}
     <!-- ./Page header -->
 
     <div class="row">
