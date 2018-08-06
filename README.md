@@ -1,4 +1,5 @@
 ### Projeto em desenvolvimento
-# Painel padrão Action!
-Painel para administração de sites.
+# Simples painel para administração de sites
+
+Projeto desenvolvido em Laravel
 
