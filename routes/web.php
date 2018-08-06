@@ -31,6 +31,7 @@ Route::group(['prefix'=>'', 'middleware' => 'auth'], function(){
 	Route::get('/logout', ['as'=>'logout', 'uses'=>'Sistema\UsuarioCtrl@logout']);
 
 	Route::get('configuracoes', 'Sistema\ConfiguracaoCtrl@editar')->name('config.editar');
+	Route::post('configuracoes', 'Sistema\ConfiguracaoCtrl@salvar')->name('config.salvar');
 });
 
 

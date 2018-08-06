@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
         <title>@yield('title')</title>
+        <link rel="shortcut icon" href="{{ asset('public/'. Configuracao::getValue('favicon')) }}" type="image/x-icon">
         <!-- Css Files -->
         <link href="{{ asset('public/sistema/css/root.css') }}" rel="stylesheet">
         <style>
@@ -43,11 +44,11 @@
                
                 <!-- Start Container -->
                 <div class="container-default animated fadeInRight"> <br>
-                    {{-- @if(Session::has('alerta'))
-                        @component('components.alerta')
+                    @if(Session::has('alerta'))
+                        @component('components.alerta' , ['alerta' => Session::get('alerta')['alerta'] ])
                             {{ Session::get('alerta')['mensagem'] }}
                         @endcomponent
-                    @endif --}}
+                    @endif
 
                     @yield('content')
 

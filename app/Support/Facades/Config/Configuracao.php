@@ -10,7 +10,11 @@ class Configuracao
      * Pega um valor de configuracao, especificando o nome da configuracao
      */
     public function getValue($name){
-        return json_decode(Config::where('nome', $name)->get()->first()->valor);
+        $config = Config::where('nome', $name)->get()->first();
+        if ($config) {
+            return $config->valor;
+        }
+        return '';
     }
 
     public function getName($name){
@@ -22,7 +26,7 @@ class Configuracao
     }
 
     public function setValue($name, $value){
-        $config = Config::where('nome', $name)->update(['valor' => json_encode($value)]);
+        $config = Config::where('nome', $name)->update(['valor' => ($value)]);
         return true;
     }
 
@@ -30,7 +34,7 @@ class Configuracao
         Config::create(array(
             'tipo' => $type,
             'nome' => str_slug($name, '_'),
-            'valor' => json_encode($value),
+            'valor' => ($value),
         ));
     }
 }
