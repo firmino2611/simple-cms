@@ -6,8 +6,8 @@
 
         <li><a href="#"><span class="icon color5"><i class="fa fa-book" aria-hidden="true"></i></span><span class="nav-title">Conteudo</span> <i class="fa fa-sort-desc caret"></i></a>
             <ul>
-                <li><a href=""><i class="fa fa-angle-right" aria-hidden="true"></i> Todos os conteudos</a></li>
-                <li><a href=""><i class="fa fa-angle-right" aria-hidden="true"></i> Adicionar novo</a></li>
+                <li><a href="{{ route('conteudos.index') }}"><i class="fa fa-angle-right" aria-hidden="true"></i> Todos os conteudos</a></li>
+                <li><a href="{{ route('conteudos.criar') }}"><i class="fa fa-angle-right" aria-hidden="true"></i> Adicionar novo</a></li>
                 <li><a href=""><i class="fa fa-angle-right" aria-hidden="true"></i> Categorias</a></li>
             </ul>
         </li>

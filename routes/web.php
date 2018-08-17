@@ -32,6 +32,11 @@ Route::group(['prefix'=>'', 'middleware' => 'auth'], function(){
 
 	Route::get('configuracoes', 'Sistema\ConfiguracaoCtrl@editar')->name('config.editar');
 	Route::post('configuracoes', 'Sistema\ConfiguracaoCtrl@salvar')->name('config.salvar');
+
+	Route::group(['prefix' => 'conteudos'], function () {
+		Route::get('', 'Sistema\ConteudoCtrl@index')->name('conteudos.index');
+		Route::get('criar', 'Sistema\ConteudoCtrl@criar')->name('conteudos.criar');
+	});
 });
 
 

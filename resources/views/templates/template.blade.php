@@ -8,6 +8,7 @@
         <link rel="shortcut icon" href="{{ asset('public/'. Configuracao::getValue('favicon')) }}" type="image/x-icon">
         <!-- Css Files -->
         <link href="{{ asset('public/sistema/css/root.css') }}" rel="stylesheet">
+        <link href="{{ asset('public/sistema/css/plugin/datatables/datatables.css') }}" rel="stylesheet">
         <style>
             .page-content{
                 padding-top: 0px
@@ -104,30 +105,32 @@
         <script type="text/javascript" src="{{ asset('public/sistema/js/bootstrap-select/bootstrap-select.js') }}"></script>
         <!-- Bootstrap Toggle -->
         <script type="text/javascript" src="{{ asset('public/sistema/js/bootstrap-toggle/bootstrap-toggle.min.js') }}"></script>
+        <!-- Bootstrap Database -->
+        <script type="text/javascript" src="{{ asset('public/sistema/js/datatables/datatables.min.js') }}"></script>
        
         @yield('scripts')
 
         <script>
             $(function(){
-                // $('.table').DataTable({
-                //     "columnDefs": [
-                //         {"orderable": true}
-                //     ],
-                //     "language": {
-                //         "zeroRecords": "Nenhuma informação encontrada",
-                //         "infoEmpty": "Mostrando 0 resultados encontrados",
-                //         "infoFiltered":   "(filtro aplicado nas _MAX_ entradas)",
-                //         "info":  "Mostrando _START_ a _END_ do total de _TOTAL_ encontradas",
-                //         "search": "Pesquisa:",
-                //         "lengthMenu":     "Mostrar _MENU_ resultados",
-                //         "paginate": {
-                //             "first":      "First",
-                //             "last":       "Last",
-                //             "next":       "Próximo",
-                //             "previous":   "Anterior"
-                //         },
-                //     }
-                // });
+                $('.table').DataTable({
+                    "columnDefs": [
+                        {"orderable": true}
+                    ],
+                    "language": {
+                        "zeroRecords": "Nenhuma informação encontrada",
+                        "infoEmpty": "Mostrando 0 resultados encontrados",
+                        "infoFiltered":   "(filtro aplicado nas _MAX_ entradas)",
+                        "info":  "Mostrando _START_ a _END_ do total de _TOTAL_ encontradas",
+                        "search": "Pesquisa:",
+                        "lengthMenu":     "Mostrar _MENU_ resultados",
+                        "paginate": {
+                            "first":      "First",
+                            "last":       "Last",
+                            "next":       "Próximo",
+                            "previous":   "Anterior"
+                        },
+                    }
+                });
             })
         </script>
     </body>

@@ -4,8 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Post extends Model
+class Conteudo extends Model
 {
-    protected $table = 'posts';
+    protected $table = 'conteudos';
     protected $fillable = ['titulo', 'slug', 'descricao', 'imagem', 'ativo', 'usuarios_id'];
 }

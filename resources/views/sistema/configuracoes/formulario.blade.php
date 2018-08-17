@@ -12,10 +12,12 @@
     @endcomponent --}}
     <!-- ./Page header -->
     @component('components.alerta', ['icone' => 'info-circle', 'alerta' => 2])
-        <h4>Aqui você pode fazer todas as configurações do seu site. 
+        <h4>
+            Aqui você pode fazer todas as configurações do seu site. 
             
         </h4>
     @endcomponent
+
     <form action="{{ route('config.salvar') }}" method="POST" enctype="multipart/form-data" >
         {{ csrf_field() }}
         <div class="row">
@@ -75,10 +77,18 @@
                 <div class="row">
                     <div class="col-md-12 form-group">
                         <label for="">Google analitycs <br>(ANALYTICS ID : [informe o ID, começando com UA-]</label>
-                        <input name="titulo" class="form-control" type="text" value="{{ Configuracao::getValue('analytics') }}" placeholder="UA-18273467-9">
+                        <input name="google_analytic" class="form-control" type="text" value="{{ Configuracao::getValue('analytics') }}" placeholder="UA-18273467-9">
                     </div>
                 </div>
 
+                <h4>Configurações sobre as publicações</h4>
+
+                <div class="checkbox checkbox-primary">
+                    <input id="checkbox" name="permitir_comentarios" type="checkbox" {{ Configuracao::getValue('permitir_comentarios') ? 'checked' : '' }}>
+                    <label for="checkbox" > Permitir comentários nas publicações  </label>
+                </div>
+
+                <br><br>
                 <div class="row">
                     <div class="col-md-12" align="right">
                         <button type="submit"class="btn btn-default btn-rounded">Salvar alterações</button>

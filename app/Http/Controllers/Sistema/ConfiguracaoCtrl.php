@@ -15,9 +15,15 @@ class ConfiguracaoCtrl extends Controller
     public function salvar(Request $request){
         // return $request->all();
         foreach($request->all() as $chave => $config){
-            if($chave != '_token')
+            if($chave != '_token'){
                 Configuracao::setValue($chave, $config);
+            }
         }
+        if(!isset($request->permitir_comentarios))
+            Configuracao::setValue('permitir_comentarios', false);
+        else
+            Configuracao::setValue('permitir_comentarios', true);
+
         if($request->hasFile('logo')){
             $logo = $request->logo->storeAs('configs/site', 
                                     str_replace(' ', '_', $request->logo->getClientOriginalName()) . '.' . $request->logo->getClientOriginalExtension());
